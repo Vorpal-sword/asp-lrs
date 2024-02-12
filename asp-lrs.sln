@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34525.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "asp-lrs", "asp-lrs\asp-lrs.csproj", "{CA1FF6CF-B21D-4697-82DB-B069446B40C6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA1FF6CF-B21D-4697-82DB-B069446B40C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA1FF6CF-B21D-4697-82DB-B069446B40C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA1FF6CF-B21D-4697-82DB-B069446B40C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA1FF6CF-B21D-4697-82DB-B069446B40C6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2D77615D-A37D-4C6B-B50B-527FE82441A0}
+	EndGlobalSection
+EndGlobal
