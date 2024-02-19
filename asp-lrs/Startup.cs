@@ -19,7 +19,12 @@ namespace ConfigurationApp
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddTransient<ICompanyService, CompanyService>();
+            //
+			services.AddControllers();
+			services.AddSingleton<CalcService>();
+			services.AddTransient<TimeOfDayService>();
+            //
+			services.AddTransient<ICompanyService, CompanyService>();
             services.AddControllersWithViews();
         }
 
