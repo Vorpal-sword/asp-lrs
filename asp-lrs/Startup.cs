@@ -26,7 +26,8 @@ namespace ConfigurationApp
             //
 			services.AddTransient<ICompanyService, CompanyService>();
             services.AddControllersWithViews();
-        }
+			//
+		}
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
@@ -48,7 +49,13 @@ namespace ConfigurationApp
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
-            });
-        }
+				endpoints.MapControllerRoute(
+	                name: "library",
+	                pattern: "Library/{action=Index}/{id?}",
+	                defaults: new { controller = "Library" });
+
+			});
+
+		}
     }
 }
