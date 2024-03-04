@@ -1,8 +1,6 @@
-using asp_lrs;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Hosting;
+﻿using YourNamespace;
 
-namespace ConfigurationApp
+namespace asp_lrs
 {
     public class Program
     {

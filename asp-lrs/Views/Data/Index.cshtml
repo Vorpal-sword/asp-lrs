@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Store Data";
+}
+
+<h1>Store Data</h1>
+
+<form method="post" action="/Data/StoreData">
+    <label for="value">Value:</label><br />
+    <input type="text" id="value" name="value" /><br />
+
+    <label for="expirationDate">Expiration Date:</label><br />
+    <input type="datetime-local" id="expirationDate" name="expirationDate" /><br />
+
+    <button type="submit">Submit</button>
+</form>
+<form method="post" action="/Data/ThrowException">
+    <button type="submit">Throw Exception</button>
+</form>
