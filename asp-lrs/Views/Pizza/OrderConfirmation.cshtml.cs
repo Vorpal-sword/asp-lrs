@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace asp_lrs.Views.Data
+namespace asp_lrs.Views.Pizza
 {
-    public class indexModel : PageModel
+    public class OrderConfirmationModel : PageModel
     {
         public void OnGet()
         {

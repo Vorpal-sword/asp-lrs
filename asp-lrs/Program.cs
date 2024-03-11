@@ -1,6 +1,7 @@
-﻿using YourNamespace;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Hosting;
 
-namespace asp_lrs
+namespace YourNamespace
 {
     public class Program
     {

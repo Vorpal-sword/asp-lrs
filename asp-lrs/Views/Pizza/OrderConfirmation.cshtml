@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Order Confirmation";
+}
+@model Product[];
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <h2>Order Confirmation</h2>
+        <p>Your order has been confirmed. Thank you for your purchase!</p>
+
+
+        <form asp-action="OrderConfirmation">
+            <h2>Orders</h2>
+
+            @foreach (var product in Model)
+            {
+                <div>
+                    <h2>@product.Name</h2>
+                    <span>Quantity: @product.Quantity</span><br>
+                    <span>Price: @product.Price</span><br>
+                    <span>Price*Quantity: @(product.Price * @product.Quantity)</span>
+                </div>
+                <br>
+            }
+
+            <button type="submit" class="btn btn-primary">Confirm Order</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+﻿@model User
+
+<form asp-action="Register">
+    <label>Name:</label>
+    <input asp-for="Name" />
+
+    <label>Last Name:</label>
+    <input asp-for="LastName" />
+
+    <label>Age:</label>
+    <input asp-for="Age" />
+    <label id="Label" style="display: none;">How many units of product do you wish to order?</label>
+    <input id="Count" style="display: none;" asp-for="Count" />
+    <button type="submit">Register</button>
+</form>
+<script>
+    document.getElementById("Age").addEventListener("input", function () {
+        var age = parseInt(document.getElementById("Age").value);
+        if (age > 16) {
+            document.getElementById("Count").style.display = "block";
+            document.getElementById("Label").style.display = "block";
+        } else {
+            document.getElementById("Count").style.display = "none";
+            document.getElementById("Label").style.display = "none";
+        }
+    });
+</script>
