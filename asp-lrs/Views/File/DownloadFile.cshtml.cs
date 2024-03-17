@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace asp_lrs.Views.Pizza
+namespace asp_lrs.Views
 {
-    public class OrderConfirmationModel : PageModel
+    public class DownloadFileModel : PageModel
     {
         public void OnGet()
         {

@@ -43,11 +43,7 @@ namespace YourNamespace
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Pizza}/{action=Register}/{id?}");
-                endpoints.MapControllerRoute(
-                    name: "pizza_order",
-                    pattern: "Pizza/Order",
-                    defaults: new { controller = "Pizza", action = "Order" });
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }
