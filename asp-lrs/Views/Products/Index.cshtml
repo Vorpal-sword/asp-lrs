@@ -1,0 +1,34 @@
+﻿@model List<Product>
+
+<h2>Products List</h2>
+
+<h3>List View:</h3>
+<ul>
+    @foreach (var product in Model)
+    {
+        <li>@product.ID. @product.Name - @product.Price$ (@product.CreatedDate)</li>
+    }
+</ul>
+
+<h3>Table View:</h3>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Created Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>@product.ID</td>
+                <td>@product.Name</td>
+                <td>@product.Price$</td>
+                <td>@product.CreatedDate.ToShortDateString()</td>
+            </tr>
+        }
+    </tbody>
+</table>
