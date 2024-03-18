@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-namespace YourNamespace
+namespace asp_lrs
 {
     public class Program
     {
