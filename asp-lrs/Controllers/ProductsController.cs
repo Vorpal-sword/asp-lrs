@@ -1,10 +1,12 @@
-﻿using asp_lrs.Models;
+﻿using asp_lrs.Filters;
+using asp_lrs.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace asp_lrs.Controllers
 {
     public class ProductsController : Controller
     {
+        [LogActionFilter]
         public IActionResult Index()
         {
             var products = new List<Product>

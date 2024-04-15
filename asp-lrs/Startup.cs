@@ -1,4 +1,5 @@
-﻿using asp_lrs.Services;
+﻿using asp_lrs.Filters;
+using asp_lrs.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -20,7 +21,10 @@ namespace asp_lrs
         {
             services.AddHttpClient();
             services.AddScoped<WeatherService>();
+            services.AddScoped<UniqueUsersFilter>();
             services.AddControllersWithViews();
+            // Додавання підтримки сесій
+            services.AddSession();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -41,6 +45,9 @@ namespace asp_lrs
             app.UseRouting();
 
             app.UseAuthorization();
+
+            // Додавання підтримки сесій
+            app.UseSession();
 
             app.UseEndpoints(endpoints =>
             {

@@ -1,32 +1,24 @@
 using asp_lrs.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
-
+using asp_lrs.Filters;
 namespace asp_lrs.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
-
-        public IActionResult Index()
+        // Використання фільтру LogActionFilter
+        [LogActionFilter]
+        public ActionResult Index()
         {
             return View();
         }
 
-        public IActionResult Privacy()
+        // Використання обох фільтрів
+        [LogActionFilter]
+        [ServiceFilter(typeof(UniqueUsersFilter))]
+        public ActionResult UniqueUsers()
         {
             return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
 }

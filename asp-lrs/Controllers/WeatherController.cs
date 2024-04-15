@@ -1,4 +1,5 @@
-﻿using asp_lrs.Services;
+﻿using asp_lrs.Filters;
+using asp_lrs.Services;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
@@ -15,6 +16,7 @@ namespace asp_lrs.Controllers
         }
 
         // Метод, який повертає представлення для відображення погоди
+        [LogActionFilter]
         public IActionResult Index()
         {
             return View();
@@ -22,6 +24,7 @@ namespace asp_lrs.Controllers
 
         // Метод для обробки запиту на отримання погодних даних
         [HttpPost]
+        [LogActionFilter]
         public async Task<IActionResult> GetWeather(string cityName)
         {
             try

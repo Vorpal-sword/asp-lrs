@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using asp_lrs.Filters;
+using Microsoft.AspNetCore.Mvc;
 using System.Text;
 
 namespace YourNamespace.Controllers
@@ -6,7 +7,9 @@ namespace YourNamespace.Controllers
     public class FileController : Controller
     {
         // GET: /File/DownloadFile
+
         [HttpGet]
+        [LogActionFilter]
         public IActionResult DownloadFile()
         {
             return View();
@@ -14,6 +17,7 @@ namespace YourNamespace.Controllers
 
         // POST: /File/DownloadFile
         [HttpPost]
+        [LogActionFilter]
         public IActionResult DownloadFile(string firstName, string lastName, string fileName)
         {
             if (string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName) || string.IsNullOrEmpty(fileName))
